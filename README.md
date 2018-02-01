@@ -1,1 +1,1 @@
-Hi
+Run this in command line: python3 maze_builder.py
