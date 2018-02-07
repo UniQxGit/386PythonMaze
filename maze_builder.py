@@ -29,5 +29,6 @@ for row in range(len(maze)):
 
 maze = helper.build_maze(maze,cornerCellX=0,cornerCellY=0,width=maze_width,height=maze_height);
 
+print ("\nFINAL:");
 helper.display_arr(maze)
 
