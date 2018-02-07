@@ -16,7 +16,7 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 	splitLine = cornerCellX+random.randint(1,width-1)*2 if vertical else cornerCellY+random.randint(1,height-1)*2
 	
 	
-	arr[cornerCellX][cornerCellY] = "o"
+	arr[cornerCellY][cornerCellX] = "o"
 	
 	#TODO: make sure that the portal isn't already open
 	portal = 0;#random.randint(1,height)*2-1 if vertical else random.randint(1,width)*2-1;
@@ -28,11 +28,13 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 	display_arr(arr);
 	if(vertical):
 		while portal == 0 or arr[portal][splitLine] == " ":
-			portal = random.randint(1,height)*2-1
+			portal = cornerCellY + (random.randint(1,height)*2-1)
+			print("PORTAL:",portal);
+			#portal %= 
 
 		arr[portal][splitLine] = " " #Replace with space
 
-		widthOfFirstHalf = int(splitLine/2)
+		widthOfFirstHalf = int((splitLine-cornerCellX)/2)
 		widthOfLastHalf = width - widthOfFirstHalf
 		if(widthOfLastHalf < 1):
 			widthOfLastHalf = 1
@@ -42,16 +44,16 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 		newCornerCellX = splitLine
 		newCornerCellY = cornerCellY
 
-		arr[cornerCellX][splitLine] = "o"
 	else:
 		while portal == 0 or arr[splitLine][portal] == " ":
-			portal = random.randint(1,width)*2-1
+			portal = cornerCellX + random.randint(1,width)*2-1
+			print("PORTAL:",portal);
 		arr[splitLine][portal] = " " #Replace with space
 
 		#Set new width/heights
 		widthOfFirstHalf = width
 		widthOfLastHalf = width
-		heightOfFirstHalf = int(splitLine/2)
+		heightOfFirstHalf = int((splitLine-cornerCellY)/2)
 		heightOfLastHalf = height - heightOfFirstHalf
 		if(heightOfLastHalf < 1):
 			heightOfLastHalf = 1
@@ -59,7 +61,8 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 		newCornerCellX = cornerCellX
 		newCornerCellY = splitLine
 
-		arr[splitLine][cornerCellY] = "o"
+		
+
 
 	print ("NEW:")
 	print ("Matrix Info:" ,"\n\tFirst Half:\n\tDimensions:",widthOfFirstHalf, "x",heightOfFirstHalf)
@@ -68,9 +71,11 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 	print ("\n\tLastHalf:\n\tDimensions",widthOfLastHalf, "x",heightOfLastHalf)
 	print ("\tCornerCell (", newCornerCellX,",", newCornerCellY,")");
 	
+	arr[newCornerCellY][newCornerCellX] = "o"
 	display_arr(arr);
-	#arr = build_maze(arr,cornerCellX=cornerCellX,cornerCellY=cornerCellY,width=widthOfFirstHalf,height=heightOfFirstHalf) #first half
-	#arr = build_maze(arr,cornerCellX=newCornerCellX,cornerCellY=newCornerCellY,width=widthOfLastHalf,height=heightOfLastHalf) #last half
+	
+	arr = build_maze(arr,cornerCellX=cornerCellX,cornerCellY=cornerCellY,width=widthOfFirstHalf,height=heightOfFirstHalf) #first half
+	arr = build_maze(arr,cornerCellX=newCornerCellX,cornerCellY=newCornerCellY,width=widthOfLastHalf,height=heightOfLastHalf) #last half
 
 	return arr
 
