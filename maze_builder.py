@@ -27,5 +27,7 @@ for row in range(len(maze)):
 		elif (row%2 == 1 and col%2 == 1):
 			maze[row][col] = ' '
 
+maze = helper.build_maze(maze,cornerCellX=0,cornerCellY=0,width=maze_width,height=maze_height);
+
 helper.display_arr(maze)
 
