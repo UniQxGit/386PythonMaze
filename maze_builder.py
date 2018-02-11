@@ -1,8 +1,12 @@
 import helper
 
+#take in user input
+maze_width = int(input("Input maze width: "))
+maze_height = int(input("Input maze height: "))
+
 #test values
-maze_width = 3
-maze_height = 5
+#maze_width = 3
+#maze_height = 5
 
 #array will include the walls and corners of the maze
 array_width = (maze_width * 2) + 1
@@ -27,11 +31,19 @@ for row in range(len(maze)):
 		elif (row%2 == 1 and col%2 == 1):
 			maze[row][col] = ' '
 
-maze = helper.build_maze(maze,cornerCellX=0,cornerCellY=0,width=maze_width,height=maze_height);
+portal_arr = []
+
+maze = helper.build_maze(maze,portal_arr,cornerCellX=0,cornerCellY=0,width=maze_width,height=maze_height);
 
 maze[1][1] = "S"
 maze[array_height-2][array_width-2] = "X"
 
 print ("\nFINAL:");
 helper.display_arr(maze)
+
+print ("\nPortals opened(in sequence):")
+for i in range(len(portal_arr)):
+	print ("[ row: ", portal_arr[i].get_row(), "| col: ", portal_arr[i].get_col(),"]")
+
+print ("\n")
 

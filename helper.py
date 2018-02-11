@@ -7,8 +7,22 @@ def display_arr(arr = []):
 			print (arr[i][j], end = " ")
 		print ("")
 
+class Coordinate:
+	col = 0
+	row = 0
+
+	def __init__(self, col, row):
+		self.row = row
+		self.col = col
+
+	def get_row(self):
+		return self.row
+
+	def get_col(self):
+		return self.col
+
 #I'm not entirely sure how to define paramaters yet, but this seems to work.
-def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1):
+def build_maze(arr = [], portal_arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1):
 	if(width == 1 and height == 1):
 		return arr
 	vertical = width > height
@@ -44,6 +58,8 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 		newCornerCellX = splitLine
 		newCornerCellY = cornerCellY
 
+		portal_arr.append(Coordinate(splitLine, portal)) #store these portal coordinates in array
+
 	else:
 		while portal == 0 or arr[splitLine][portal] == " ":
 			portal = cornerCellX + random.randint(1,width)*2-1
@@ -61,8 +77,9 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 		newCornerCellX = cornerCellX
 		newCornerCellY = splitLine
 
-		
+		portal_arr.append(Coordinate(portal, splitLine)) #store these portal coordinates in array
 
+		
 
 	print ("NEW:")
 	print ("Matrix Info:" ,"\n\tFirst Half:\n\tDimensions:",widthOfFirstHalf, "x",heightOfFirstHalf)
@@ -74,8 +91,8 @@ def build_maze(arr = [], cornerCellX = 0, cornerCellY = 0, width = 1, height = 1
 	arr[newCornerCellY][newCornerCellX] = "o"
 	display_arr(arr);
 	
-	arr = build_maze(arr,cornerCellX=cornerCellX,cornerCellY=cornerCellY,width=widthOfFirstHalf,height=heightOfFirstHalf) #first half
-	arr = build_maze(arr,cornerCellX=newCornerCellX,cornerCellY=newCornerCellY,width=widthOfLastHalf,height=heightOfLastHalf) #last half
+	arr = build_maze(arr,portal_arr,cornerCellX=cornerCellX,cornerCellY=cornerCellY,width=widthOfFirstHalf,height=heightOfFirstHalf) #first half
+	arr = build_maze(arr,portal_arr,cornerCellX=newCornerCellX,cornerCellY=newCornerCellY,width=widthOfLastHalf,height=heightOfLastHalf) #last half
 
 	return arr
 
