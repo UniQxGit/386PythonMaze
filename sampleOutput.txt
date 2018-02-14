@@ -1,0 +1,540 @@
+Input maze width: Input maze height: 
+Split Info: Vertical: False  splitLine: 6
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 0 , 0 )
+	Dimensions:  4 x 4
+o - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 3 , 6
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 4 x 3
+	CornerCell ( 0 , 0 )
+
+	LastHalf:
+	Dimensions 4 x 1
+	CornerCell ( 0 , 6 )
+o - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 2
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 0 , 0 )
+	Dimensions:  4 x 3
+o - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 2 , 1
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 3
+	CornerCell ( 0 , 0 )
+
+	LastHalf:
+	Dimensions 3 x 3
+	CornerCell ( 2 , 0 )
+o - o - + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: False  splitLine: 4
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 0 , 0 )
+	Dimensions:  1 x 3
+o - o - + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 1 , 4
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 2
+	CornerCell ( 0 , 0 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 0 , 4 )
+o - o - + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: False  splitLine: 2
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 0 , 0 )
+	Dimensions:  1 x 2
+o - o - + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+|   |   |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 1 , 2
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 0 , 0 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 0 , 2 )
+o - o - + - + - + 
+|       |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: False  splitLine: 4
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 2 , 0 )
+	Dimensions:  3 x 3
+o - o - + - + - + 
+|       |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 7 , 4
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 3 x 2
+	CornerCell ( 2 , 0 )
+
+	LastHalf:
+	Dimensions 3 x 1
+	CornerCell ( 2 , 4 )
+o - o - + - + - + 
+|       |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 4
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 2 , 0 )
+	Dimensions:  3 x 2
+o - o - + - + - + 
+|       |   |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 4 , 1
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 2
+	CornerCell ( 2 , 0 )
+
+	LastHalf:
+	Dimensions 2 x 2
+	CornerCell ( 4 , 0 )
+o - o - o - + - + 
+|           |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: False  splitLine: 2
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 2 , 0 )
+	Dimensions:  1 x 2
+o - o - o - + - + 
+|           |   | 
+o   + - + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 3 , 2
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 2 , 0 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 2 , 2 )
+o - o - o - + - + 
+|           |   | 
+o   o   + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: False  splitLine: 2
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 4 , 0 )
+	Dimensions:  2 x 2
+o - o - o - + - + 
+|           |   | 
+o   o   + - + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 5 , 2
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 2 x 1
+	CornerCell ( 4 , 0 )
+
+	LastHalf:
+	Dimensions 2 x 1
+	CornerCell ( 4 , 2 )
+o - o - o - + - + 
+|           |   | 
+o   o   o   + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 6
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 4 , 0 )
+	Dimensions:  2 x 1
+o - o - o - + - + 
+|           |   | 
+o   o   o   + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 6 , 1
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 4 , 0 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 6 , 0 )
+o - o - o - o - + 
+|               | 
+o   o   o   + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 6
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 4 , 2 )
+	Dimensions:  2 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   + - + 
+|   |   |   |   | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 6 , 3
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 4 , 2 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 6 , 2 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 4
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 2 , 4 )
+	Dimensions:  3 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - + - +   + 
+|   |   |   |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 4 , 5
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 2 , 4 )
+
+	LastHalf:
+	Dimensions 2 x 1
+	CornerCell ( 4 , 4 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - +   + 
+|   |       |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 6
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 4 , 4 )
+	Dimensions:  2 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - +   + 
+|   |       |   | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 6 , 5
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 4 , 4 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 6 , 4 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 2
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 0 , 6 )
+	Dimensions:  4 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - +   + - + - + 
+|   |   |   |   | 
++ - + - + - + - + 
+PORTAL: 2 , 7
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 0 , 6 )
+
+	LastHalf:
+	Dimensions 3 x 1
+	CornerCell ( 2 , 6 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 4
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 2 , 6 )
+	Dimensions:  3 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   + - + - + 
+|       |   |   | 
++ - + - + - + - + 
+PORTAL: 4 , 7
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 2 , 6 )
+
+	LastHalf:
+	Dimensions 2 x 1
+	CornerCell ( 4 , 6 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   o - + - + 
+|           |   | 
++ - + - + - + - + 
+
+Split Info: Vertical: True  splitLine: 6
+ORIGINAL:
+Matrix Info: 
+	Corner Cell: ( 4 , 6 )
+	Dimensions:  2 x 1
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   o - + - + 
+|           |   | 
++ - + - + - + - + 
+PORTAL: 6 , 7
+NEW:
+Matrix Info: 
+	First Half:
+	Dimensions: 1 x 1
+	CornerCell ( 4 , 6 )
+
+	LastHalf:
+	Dimensions 1 x 1
+	CornerCell ( 6 , 6 )
+o - o - o - o - + 
+|               | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   o - o - + 
+|               | 
++ - + - + - + - + 
+
+FINAL:
+o - o - o - o - + 
+| S             | 
+o   o   o   o - + 
+|   |   |       | 
+o   o - o - o   + 
+|   |           | 
+o - o   o - o - + 
+|             X | 
++ - + - + - + - + 
+
+Portals opened (in sequence):
+[ row:  6 | col:  3 ]
+[ row:  1 | col:  2 ]
+[ row:  4 | col:  1 ]
+[ row:  2 | col:  1 ]
+[ row:  4 | col:  7 ]
+[ row:  1 | col:  4 ]
+[ row:  2 | col:  3 ]
+[ row:  2 | col:  5 ]
+[ row:  1 | col:  6 ]
+[ row:  3 | col:  6 ]
+[ row:  5 | col:  4 ]
+[ row:  5 | col:  6 ]
+[ row:  7 | col:  2 ]
+[ row:  7 | col:  4 ]
+[ row:  7 | col:  6 ]
+
+
