@@ -52,15 +52,15 @@ def build_maze(arr=[], portal_arr=[], cornerCellX=0, cornerCellY=0, width=1, hei
     splitLine = cornerCellX + random.randint(1, width - 1) * 2 if vertical else cornerCellY + random.randint(1,
                                                                                                              height - 1) * 2
 
-    arr[cornerCellY][cornerCellX] = "o"
+    #arr[cornerCellY][cornerCellX] = "o"
 
     portal = 0
 
-    print("\nSplit Info: Vertical:", vertical, " splitLine:", splitLine)
-    print("ORIGINAL:")
-    print("Matrix Info:", "\n\tCorner Cell: (", cornerCellX, ",", cornerCellY, ")\n\tDimensions: ", width, "x", height);
+    # print("\nSplit Info: Vertical:", vertical, " splitLine:", splitLine)
+    # print("ORIGINAL:")
+    # print("Matrix Info:", "\n\tCorner Cell: (", cornerCellX, ",", cornerCellY, ")\n\tDimensions: ", width, "x", height);
 
-    display_arr(arr);
+    # display_arr(arr);
     if (vertical):
         while portal == 0 or arr[portal][splitLine] == " ":
             portal = cornerCellY + (random.randint(1, height) * 2 - 1)
@@ -99,15 +99,15 @@ def build_maze(arr=[], portal_arr=[], cornerCellX=0, cornerCellY=0, width=1, hei
 
         portal_arr.append(Coordinate(portal, splitLine))  # store these portal coordinates in array
 
-    print("NEW:")
-    print("Matrix Info:", "\n\tFirst Half:\n\tDimensions:", widthOfFirstHalf, "x", heightOfFirstHalf)
-    print("\tCornerCell (", cornerCellX, ",", cornerCellY, ")");
+    # print("NEW:")
+    # print("Matrix Info:", "\n\tFirst Half:\n\tDimensions:", widthOfFirstHalf, "x", heightOfFirstHalf)
+    # print("\tCornerCell (", cornerCellX, ",", cornerCellY, ")");
 
-    print("\n\tLastHalf:\n\tDimensions", widthOfLastHalf, "x", heightOfLastHalf)
-    print("\tCornerCell (", newCornerCellX, ",", newCornerCellY, ")");
+    # print("\n\tLastHalf:\n\tDimensions", widthOfLastHalf, "x", heightOfLastHalf)
+    # print("\tCornerCell (", newCornerCellX, ",", newCornerCellY, ")");
 
-    arr[newCornerCellY][newCornerCellX] = "o"
-    display_arr(arr);
+    #arr[newCornerCellY][newCornerCellX] = "o"
+    #display_arr(arr);
 
     arr = build_maze(arr, portal_arr, cornerCellX=cornerCellX, cornerCellY=cornerCellY, width=widthOfFirstHalf,
                      height=heightOfFirstHalf)  # first half
